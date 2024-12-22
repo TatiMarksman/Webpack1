@@ -1,6 +1,9 @@
-// TODO: write your code here
-import sum from './basic';
+import { default as Game, GameSavingData, readGameSaving as loadGame, writeGameSaving as saveGame } from './game';  // Импортируем Game и другие элементы
 
 console.log('app worked');
 
-console.log(sum([1, 2]));
+const game = new Game();
+game.start();
+
+loadGame();
+saveGame();
